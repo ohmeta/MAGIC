@@ -209,12 +209,12 @@ snakemake \
 Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 | Field Name           | Description                                                                                                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| pMAG_id              | ID of the pMAG                                                                                                                |
-| pOTU_id              | ID of the pOTU                                                                                                                |
+| pMAG_id              | ID of the pMAG                                                                                                           |
+| pOTU_id              | ID of the pOTU                                                                                                           |
 | pMAG                 | Original name of pMAG                                                                                                    |
 | pOTU                 | Name of the representative species-level pMAG                                                                            |
-|project_accession | Project from which the MAG was generated|
-|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+|project_accession     | Project from which the MAG was generated                                                                                 |
+|assembly_group        | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | completeness         | Completeness estimated by CheckM                                                                                         |
 | contamination        | Contamination estimated by CheckM                                                                                        |
 | strain heterogeneity | Strain heterogeneity estimated by CheckM                                                                                 |
@@ -222,7 +222,7 @@ Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 | SGB_quality_level    | Quality level of MAG based on the criteria of species level genomic bins (SGB)                                           |
 | quality_score        | Completeness - 5 * contamination                                                                                         |
 | classification       | Taxonomic assignment by GTDBtk                                                                                           |
-| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                         |
+| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                                 |
 | Length               | Length (bp) of the pMAG                                                                                                  |
 | Count                | Number of contigs for the pMAG                                                                                           |
 | GC (%)               | GC content (%) of the pMAG                                                                                               |
@@ -246,12 +246,12 @@ Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 Table S3. Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 | Field Name              | Description                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| vMAG_id                 | ID of the vMAG                                                                                                              |
-| vOTU_id                 | ID of the vOTU                                                                                                               |
+| vMAG_id                 | ID of the vMAG                                                                                                          |
+| vOTU_id                 | ID of the vOTU                                                                                                          |
 | vMAG                    | Original name of vMAG                                                                                                   |
 | vOTU                    | Name of the representative species-level vMAG                                                                           |
-|project_accession | Project from which the MAG was generated|
-|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+|project_accession        | Project from which the MAG was generated                                                                                |
+|assembly_group           | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | viruses_type            | Type of the virus inferred by geNomad                                                                                   |
 | contig_length           | Length (bp) of the vMAG                                                                                                 |
 | provirus                | Existence of provirus determined by geNomad                                                                             |
