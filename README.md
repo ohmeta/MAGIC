@@ -8,11 +8,11 @@ Early-life gut microbiomes are implicated in health and diseases. However, exist
 
 ### MAGs Folder structure
 
-Each MAG, stratified by prokaryotic (bacterial and archaeal, pMAGs) vs. viral ones (vMAGs)., was assigned a unique 9-digit ID. The MAGs are stored within subfolders named with the first three, middle and last three digits of their IDs. For example, the sequence for a pMAG numbered as “000000001” is stored in MAGIC_pMAGs/000/000/001/MAGIC_pMAG_000000001.fa.
+Each MAG was assigned a unique 9-digit ID. The MAGs are stored within subfolders named with the first three, middle and last three digits of their IDs. For example, the sequence for a pMAG numbered as “000000001” is stored in MAGIC_pMAGs/000/000/001/MAGIC_pMAG_000000001.fa.
 
 ### MAGIC_pMAGs
 
-MAGIC_pMAGs.tar.gz: This is a compressed folder including fasta format files of total of 26352 strain level bacteria/archaea metagenomics assembly genomes (pMAGs). Uncompress it, it looks like:
+MAGIC_pMAGs.tar.gz: This is a compressed folder including fasta format files of total of 26352 strain-level prokaryotic (bacterial pr archaeal) metagenome-assembled genomes (pMAGs). After uncompressing, the folder structure will appear as follows:
 
 ```sh
 $ tar -xzvf MAGIC_pMAGs.tar.gz
@@ -40,7 +40,7 @@ MAGIC_pMAGs/000/000/005/MAGIC_pMAG_000000005.fa.seqkit.stats.tsv
 
 ### MAGIC_vMAGs
 
-MAGIC_vMAGs.tar.gz: This is a compressed folder including fasta format files of total of 191646 strain level viral metagenomics assembly genomes (vMAGs). Uncompress it, it looks like:
+MAGIC_vMAGs.tar.gz: This is a compressed folder including fasta format files of total of 191646 strain level viral metagenome-assembled genomes (vMAGs). After uncompressing, the folder structure will appear as follows:
 
 ```sh
 $ tar -xzvf MAGIC_vMAGs.tar.gz
@@ -70,8 +70,8 @@ MAGIC_vMAGs/000/000/005/MAGIC_vMAG_000000005.fa.seqkit.stats.tsv
 
 ### MAGIC databases used for taxonomic profiling
 
-MAGIC_K2DB.tar.gz: A phanta-style Kraken2 databases used for microbiome profiling.
-After uncompress it, it looks like below:
+MAGIC_K2DB.tar.gz: This is a phanta-style Kraken2 databases used for microbiome profiling.
+After uncompressing, the folder structure will appear as follows:
 
 ```sh
 $ tar -xzvf MAGIC_K2DB.tar.gz
@@ -108,9 +108,9 @@ MAGIC_K2DB/taxonomy/prelim_map.txt
 
 ```
 
-### MAGIC database based workflow for taxonomic profiling
+### A workflow for taxonomic profiling based on the MAGIC database
 
-#### Prepare phanta workflow
+#### Prepare the Phanta workflow
 
 ```sh
 $ git clone -b magic_db https://github.com/ohmeta/phanta
@@ -118,14 +118,14 @@ $ git clone -b magic_db https://github.com/ohmeta/phanta
 
 Then please follow the documentation on github to install other dependences software.
 
-#### Create a project
+#### Create a folder for the project
 
 ```
 mkdir -p profiling_test
 cd profiling_test
 ```
 
-#### Prepare sample sheet file `samples.rmhost.tsv` like below
+#### Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
 
 | #sample_id  |   fq1                             | fq2                               |
 | ----------- | --------------------------------- | --------------------------------- |
@@ -141,15 +141,15 @@ cd profiling_test
 $ cp /full/path/to/git/clone/phanta/config.yaml ./
 $ vim config.yaml
 
-# updaed config.yaml like below
+# Specify paths and threshold in the config.yaml, such as:
 
 pipeline_directory: /full/path/to/git/clone/phanta
 
 # Sample file specifies sample names and names of files containing sample reads
 # Format: Tab-delimited, three columns
 # sample_name  read1_file  [read2_file]
-# if paired end, all samples must be paired end
-# if single end, all samples must be single end
+# if paired end, all samples must be paired-end
+# if single end, all samples must be single-end
 # See example (samp_file.txt) in the testing folder
 sample_file: /full/path/to/profiling_test/samples.rmhost.tsv
 
@@ -209,12 +209,12 @@ snakemake \
 Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 | Field Name           | Description                                                                                                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| pMAG_id              | ID of the pMAG                                                                                                           |
-| pOTU_id              | ID of the pOTU                                                                                                           |
-| pMAG                 | Original name of pMAG                                                                                                    |
+| pMAG_id              | ID of the pMAG (primary key)                                                                                                               |
+| pOTU_id              | ID of the pOTU                                                                                                                |
+| pMAG                 | Original name of the pMAG                                                                                                    |
 | pOTU                 | Name of the representative species-level pMAG                                                                            |
-|project_accession     | Project from which the MAG was generated                                                                                 |
-|assembly_group        | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+|project_accession | Project from which the MAG was generated|
+|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | completeness         | Completeness estimated by CheckM                                                                                         |
 | contamination        | Contamination estimated by CheckM                                                                                        |
 | strain heterogeneity | Strain heterogeneity estimated by CheckM                                                                                 |
@@ -222,7 +222,7 @@ Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 | SGB_quality_level    | Quality level of MAG based on the criteria of species level genomic bins (SGB)                                           |
 | quality_score        | Completeness - 5 * contamination                                                                                         |
 | classification       | Taxonomic assignment by GTDBtk                                                                                           |
-| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                                 |
+| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                         |
 | Length               | Length (bp) of the pMAG                                                                                                  |
 | Count                | Number of contigs for the pMAG                                                                                           |
 | GC (%)               | GC content (%) of the pMAG                                                                                               |
@@ -246,12 +246,12 @@ Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 Table S3. Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 | Field Name              | Description                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| vMAG_id                 | ID of the vMAG                                                                                                          |
-| vOTU_id                 | ID of the vOTU                                                                                                          |
-| vMAG                    | Original name of vMAG                                                                                                   |
+| vMAG_id                 | ID of the vMAG (primary key)                                                                                                             |
+| vOTU_id                 | ID of the vOTU                                                                                                               |
+| vMAG                    | Original name of the vMAG                                                                                                   |
 | vOTU                    | Name of the representative species-level vMAG                                                                           |
-|project_accession        | Project from which the MAG was generated                                                                                |
-|assembly_group           | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+|project_accession | Project from which the MAG was generated|
+|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | viruses_type            | Type of the virus inferred by geNomad                                                                                   |
 | contig_length           | Length (bp) of the vMAG                                                                                                 |
 | provirus                | Existence of provirus determined by geNomad                                                                             |
@@ -284,10 +284,23 @@ Table S3. Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 | vOTU_unique             | Uniquness of the vOTU compared to the publicly available human gut vOTUs (yes: unique; no: overlapped with known vOTUs) |
 
 ### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
-Table S4. Annotations of MAGIC proteins (9,548,653 entries * 49 columns)
+```
+This table has two parts. The first part lists proteins in the pMAGs and vMAGs (Table S4a), whereas the second part provides functional annotations of the non-redundant proteins (Table S4b). Users may retrieve the list of genes on a MAG of interest (from Table S4a) and subsequently refer to the gene annotation table for annotations (in Table S4b). Conversely, users may retrieve a list of MAGs (from Table S4a) carrying the genes of interest (according to Table S4b).
+```
+Table S4a. Proteins in the MAGs (70,538,090 entries * 5 columns)
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| ID                       | ID of the protein                                                                                                                           |
+| MAG_id                       | ID of the pMAG/vMAG                                                                                                                           |
+| OTU_id                       | ID of the pOTU/vOTU                                                                                                                           |
+| source_mag                       | Original name of the pMAG/vMAG                                                                                                                           |
+| original_protein                       | ID of the protein annotated in the MAG (primary key)                                                                                                                         |
+| pv_rep                       | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b.                                                                                                                           |
+
+
+Table S4b. Annotations of the MAGIC proteins (9,548,653 entries * 49 columns)
+| Field Name               | Description                                                                                                                                 |
+|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| ID                       | ID of the protein (primary key)                                                                                                                          |
 | eggNOG_eggNOG_OGs        | eggNOG orthologous group                                                                                                                    |
 | eggNOG_COG_category      | Clusters of Orthologous Genes (COG) category                                                                                                |
 | eggNOG_Description       | Description of the COG category                                                                                                             |
