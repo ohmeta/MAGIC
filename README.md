@@ -148,47 +148,46 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | size_MAGIC              | Number of MAGIC-derived vMAGs in the vOTU                                                                               |
 | vOTU_unique             | Uniquness of the vOTU compared to the publicly available human gut vOTUs (yes: unique; no: overlapped with known vOTUs) |
 
-##### Table S2c: Clustering structure of MAGIC pOTUs
+##### Table S2c: Clustering of MAGIC pOTUs with public databases
 
-| Field Name    | Description                                                      |
-| ------------- | ---------------------------------------------------------------- |
-| MAGIC_pOTU_id | ID of the MAGIC's pOTU                                           |
-| Rep_DB        | the database where representative pOTU come from                 |
-| Rep_FA        | the fasta file name of representative pOTU                       |
-| MAGIC         | the pMAGs name list of pOTU from MAGIC database                  |
-| CGR2          | the pMAGs name list of pOTU from CRG2 database                   |
-| ELGG          | the pMAGs name list of pOTU from ELGG database                   |
-| GTDB          | the pMAGs name list of pOTU from GTDB database                   |
-| Hadza         | the pMAGs name list of pOTU from Hadza database                  |
-| IMGG          | the pMAGs name list of pOTU from IMGG database                   |
-| JMAG          | the pMAGs name list of pOTU from JMAG database                   |
-| SPMP          | the pMAGs name list of pOTU from SPMP database                   |
-| UHGG          | the pMAGs name list of pOTU from UHGG database                   |
-| WIS           | the pMAGs name list of pOTU from WIS database                    |
+| Field Name    | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| MAGIC_pOTU_id | ID of the pOTU in MAGIC                              |
+| Rep_DB        | Source of the representative pOTU                    |
+| Rep_FA        | File name of the representative pOTU                 |
+| MAGIC         | List of pMAGs of the pOTU from MAGIC database        |
+| CGR2          | List of pMAGs of the pOTU from CRG2 database         |
+| ELGG          | List of pMAGs of the pOTU from ELGG database         |
+| GTDB          | List of pMAGs of the pOTU from GTDB database         |
+| Hadza         | List of pMAGs of the pOTU from Hadza database        |
+| IMGG          | List of pMAGs of the pOTU from IMGG database         |
+| JMAG          | List of pMAGs of the pOTU from JMAG database         |
+| SPMP          | List of pMAGs of the pOTU from SPMP database         |
+| UHGG          | List of pMAGs of the pOTU from UHGG database         |
+| WIS           | List of pMAGs of the pOTU from WIS database          |
 
 ##### Table S2d: Clustering structure of MAGIC vOTUs
 
-| Field Name    | Description                                                      |
-| ------------- | ---------------------------------------------------------------- |
-| MAGIC_vOTU_id | ID of the MAGIC's vOTU                                           |
-| MAGIC_vOTU    | Name of the representative species-level vMAG of MAGIC database  |
-| Rep_DB        | the database where representative vOTU come from                 |
-| Rep_FA        | the fasta file name of representative vOTU                       |
-| MAGIC         | the vMAGs name list of vOTU from MAGIC database                  |
-| ELGV          | the vMAGs name list of vOTU from ELGV database                   |
-| GPD           | the vMAGs name list of vOTU from GPD database                    |
-| MGV           | the vMAGs name list of vOTU from MGV database                    |
-| GVD           | the vMAGs name list of vOTU from GVD database                    |
-| IMG_VR        | the vMAGs name list of vOTU from IMG_VR database                 |
-| RefSeq        | the vMAGs name list of vOTU from RefSeq database                 |
-| COPSAC_V      | the vMAGs name list of vOTU from COPSAC_V database               |
-| JVD           | the vMAGs name list of vOTU from JVD database                    |
-| JP4D          | the vMAGs name list of vOTU from JP4D database                   |
-| Centenarians  | the vMAGs name list of vOTU from Centenarians database           |
-| Hadza         | the vMAGs name list of vOTU from Hadza database                  |
-| LOU           | the vMAGs name list of vOTU from LOU database                    |
-| HEVC          | the vMAGs name list of vOTU from HEVC database                   |
-| LLNEXT        | the vMAGs name list of vOTU from LLNEXT database                 |
+| Field Name    | Description                                          |
+| ------------- | ---------------------------------------------------- |
+| MAGIC_vOTU_id | ID of the pOTU in MAGIC                              |
+| Rep_DB        | Source of the representative vOTU                    |
+| Rep_FA        | File name of the representative vOTU                 |
+| MAGIC         | List of vMAGs of the vOTU from MAGIC database        |
+| ELGV          | List of vMAGs of the vOTU from ELGV database         |
+| GPD           | List of vMAGs of the vOTU from GPD database          |
+| MGV           | List of vMAGs of the vOTU from MGV database          |
+| GVD           | List of vMAGs of the vOTU from GVD database          |
+| IMG_VR        | List of vMAGs of the vOTU from IMG_VR database       |
+| RefSeq        | List of vMAGs of the vOTU from RefSeq database       |
+| COPSAC_V      | List of vMAGs of the vOTU from COPSAC_V database     |
+| JVD           | List of vMAGs of the vOTU from JVD database          |
+| JP4D          | List of vMAGs of the vOTU from JP4D database         |
+| Centenarians  | List of vMAGs of the vOTU from Centenarians database |
+| Hadza         | List of vMAGs of the vOTU from Hadza database        |
+| LOU           | List of vMAGs of the vOTU from LOU database          |
+| HEVC          | List of vMAGs of the vOTU from HEVC database         |
+| LLNEXT        | List of vMAGs of the vOTU from LLNEXT database       |
 
 #### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
 
