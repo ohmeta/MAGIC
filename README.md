@@ -191,7 +191,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 #### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
 
-This table has two parts. The first part lists proteins in the pMAGs and vMAGs (Table S4a), whereas the second part provides functional annotations of the non-redundant proteins (Table S4b). Users may retrieve the list of genes on a MAG of interest (from Table S4a) and subsequently refer to the gene annotation table for annotations (in Table S4b). Conversely, users may retrieve a list of MAGs (from Table S4a) carrying the genes of interest (according to Table S4b).
+This table has two parts. The first part lists proteins in the pMAGs and vMAGs (`Table S4a`), whereas the second part provides functional annotations of the non-redundant proteins (`Table S4b`). Users may retrieve the list of genes on a MAG of interest (from `Table S4a`) and subsequently refer to the gene annotation table for annotations (in `Table S4b`). Conversely, users may retrieve a list of MAGs (from `Table S4a`) carrying the genes of interest (according to `Table S4b`).
 
 ##### Table S4a: Proteins in the MAGs (70,538,090 entries * 5 columns)
 
