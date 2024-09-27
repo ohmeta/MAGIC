@@ -2,15 +2,29 @@
 
 ## Abstract
 
-Early-life gut microbiomes are implicated in health and diseases. However, existing databases had excessive adult microbiomes as input that hampers infant gut microbiome profiling. Here, we collected 19,494 early-life (0-7 years) gut metagenomes to generate the Metagenome-Assembled Genome Inventory for Children (MAGIC). MAGIC contains great genomic novelty, as 9.0% (279) of the bacterial species genomes, 78.9% (110,153) of the viral species genomes and 52.7% (5,036,208) of the proteins were not reported previously. This database improves early-life microbiome profiling, especially for samples collected from low-income countries. We found Africans have distinct gut bacteriome and virome profiles from those of other continents. We also identified 54 keystone species, forming guilds that fluctuate in abundance with time. Their abundances are reduced in preterm infants and are implicated in onsets of childhood diseases. In conclusion, the MAGIC database recovers previously uncharted genomic information, and enables accurate and comprehensive virome-inclusive studies of early-life gut microbiomes.
+Existing microbiota databases are biased towards adult samples, hampering accurate profiling of the infant gut microbiome. Here, we generated a Metagenome-Assembled Genome Inventory for Children (MAGIC) from a large collection of bulk and viral-like particle-enriched metagenomes from 0-7 years of age, encompassing 3,299 prokaryotic and 139,624 viral species-level genomes, 8.5% and 63.9% of which are novel. MAGIC improves early-life microbiome profiling, with the greatest improvement in read mapping observed in Africans. We then identified 54 candidate keystone species, including several Bifidobacterium spp. and four phages, forming guilds that fluctuated in abundance with time. Their abundances were reduced in preterm infants and were associated with childhood allergies. By analyzing the B. longum pangenome, we found evidence of phage-mediated evolution and quorum sensing-related ecological adaptation. Together, the MAGIC database recovers previously uncharted genomes that enable characterization of dynamics of early-life microbiomes, identification of candidate keystone species, and strain-level study of target species. 
 
-## MAGs
 
-### MAGs Folder structure
+## Files
+
+### Source and DOI
+
+Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.10369093
+
+| Filename | Filesize  |  MD5 |
+| -------- | --------- | ---- |
+|  MAGIC_K2DB.tar.gz   | 21.53 GB  | b187ae1caf9573557796f10634d9ca0e |
+|  MAGIC_vMAGs.tar.gz   | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
+|  MAGIC_pMAGs.tar.gz   | 18.66 GB   | 894677f2d297e656f7e05ba0cd8f256c |
+
+
+### MAGs
+
+#### MAGs Folder structure
 
 Each MAG was assigned a unique 9-digit ID. The MAGs are stored within subfolders named with the first three, middle and last three digits of their IDs. For example, the sequence for a pMAG numbered as “000000001” is stored in MAGIC_pMAGs/000/000/001/MAGIC_pMAG_000000001.fa.
 
-### MAGIC_pMAGs
+#### MAGIC_pMAGs
 
 MAGIC_pMAGs.tar.gz: This is a compressed folder including fasta format files of total of 26352 strain-level prokaryotic (bacterial pr archaeal) metagenome-assembled genomes (pMAGs). After uncompressing, the folder structure will appear as follows:
 
@@ -38,7 +52,7 @@ MAGIC_pMAGs/000/000/005/MAGIC_pMAG_000000005.fa.seqkit.stats.tsv
 ........
 ```
 
-### MAGIC_vMAGs
+#### MAGIC_vMAGs
 
 MAGIC_vMAGs.tar.gz: This is a compressed folder including fasta format files of total of 191646 strain level viral metagenome-assembled genomes (vMAGs). After uncompressing, the folder structure will appear as follows:
 
@@ -66,9 +80,9 @@ MAGIC_vMAGs/000/000/005/MAGIC_vMAG_000000005.fa.seqkit.stats.tsv
 ........
 ```
 
-## Workflow
+### Workflow
 
-### MAGIC databases used for taxonomic profiling
+#### MAGIC databases used for taxonomic profiling
 
 MAGIC_K2DB.tar.gz: This is a phanta-style Kraken2 databases used for microbiome profiling.
 After uncompressing, the folder structure will appear as follows:
@@ -108,9 +122,9 @@ MAGIC_K2DB/taxonomy/prelim_map.txt
 
 ```
 
-### A workflow for taxonomic profiling based on the MAGIC database
+#### A workflow for taxonomic profiling based on the MAGIC database
 
-#### Prepare the Phanta workflow
+##### Prepare the Phanta workflow
 
 ```sh
 $ git clone -b magic_db https://github.com/ohmeta/phanta
@@ -118,14 +132,14 @@ $ git clone -b magic_db https://github.com/ohmeta/phanta
 
 Then please follow the documentation on github to install other dependences software.
 
-#### Create a folder for the project
+##### Create a folder for the project
 
 ```
 mkdir -p profiling_test
 cd profiling_test
 ```
 
-#### Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
+##### Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
 
 | #sample_id  |   fq1                             | fq2                               |
 | ----------- | --------------------------------- | --------------------------------- |
@@ -133,9 +147,9 @@ cd profiling_test
 | ERR525732   | /full/path/to/ERR525732.rmhost.1.fq.gz | /full/path/to/ERR525732.rmhost.2.fq.gz |
 | ERR525735   | /full/path/to/ERR525735.rmhost.1.fq.gz | /full/path/to/ERR525735.rmhost.2.fq.gz |
 
-#### Running phanta workflow
+##### Running phanta workflow
 
-##### Update config.yaml like below:
+###### Update config.yaml like below:
 
 ```sh
 $ cp /full/path/to/git/clone/phanta/config.yaml ./
@@ -192,7 +206,7 @@ filter_thresh: 10 # do not assign reads to species X if < this number of reads w
 delete_intermediate: False # True or False
 ```
 
-##### Run phanta workflow based on MAGIC database
+###### Run phanta workflow based on MAGIC database
 
 ```sh
 snakemake \
@@ -203,10 +217,12 @@ snakemake \
     --jobs 8
 ```
 
-## Tables
+### Tables
 
-### Table-S2-Annotations_of_MAGIC-pMAGs.xlsx
-Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
+#### Table-S2-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx
+
+##### Sheet 1: Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
+
 | Field Name           | Description                                                                                                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------|
 | pMAG_id              | ID of the pMAG (primary key)                                                                                                               |
@@ -241,9 +257,7 @@ Table S2. Annotations of MAGIC pMAGs (26,352 entries * 34 columns)
 | GUNC-reference_representation_score            | genes_retained_index * mean_hit_identity. Estimates how well a genome is represented in the GUNC DB                                                                                                                             |
 | GUNC-pass.GUNC                                 | Overall assessment by GUNC. A genome passes if clade_separation_score <= 0.45, a cutoff benchmarked using simulated genomes                                                                                                     |
 
-
-### Table-S3-Annotations_of_MAGIC-vMAGs.xlsx
-Table S3. Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
+##### Sheet 2: Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 | Field Name              | Description                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
 | vMAG_id                 | ID of the vMAG (primary key)                                                                                                             |
@@ -283,11 +297,13 @@ Table S3. Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 | size_MAGIC              | Number of MAGIC-derived vMAGs in the vOTU                                                                               |
 | vOTU_unique             | Uniquness of the vOTU compared to the publicly available human gut vOTUs (yes: unique; no: overlapped with known vOTUs) |
 
-### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
+#### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
+
 ```
 This table has two parts. The first part lists proteins in the pMAGs and vMAGs (Table S4a), whereas the second part provides functional annotations of the non-redundant proteins (Table S4b). Users may retrieve the list of genes on a MAG of interest (from Table S4a) and subsequently refer to the gene annotation table for annotations (in Table S4b). Conversely, users may retrieve a list of MAGs (from Table S4a) carrying the genes of interest (according to Table S4b).
 ```
-Table S4a. Proteins in the MAGs (70,538,090 entries * 5 columns)
+
+##### Sheet 1: Proteins in the MAGs (70,538,090 entries * 5 columns)
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | MAG_id                       | ID of the pMAG/vMAG                                                                                                                           |
@@ -296,8 +312,8 @@ Table S4a. Proteins in the MAGs (70,538,090 entries * 5 columns)
 | original_protein                       | ID of the protein annotated in the MAG (primary key)                                                                                                                         |
 | pv_rep                       | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b.                                                                                                                           |
 
+##### Sheet 2: Annotations of the MAGIC proteins (9,548,653 entries * 49 columns)
 
-Table S4b. Annotations of the MAGIC proteins (9,548,653 entries * 49 columns)
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
 | ID                       | ID of the protein (primary key)                                                                                                                          |
