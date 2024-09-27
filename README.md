@@ -10,13 +10,14 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 
 Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.10369093
 
-| Filename                                        | Filesize |  MD5                             |
-| ----------------------------------------------- | -------- | -------------------------------- |
-| MAGIC_vMAGs.tar.gz                              | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
-| MAGIC_pMAGs.tar.gz                              | 18.66 GB | 894677f2d297e656f7e05ba0cd8f256c |
-| MAGIC_K2DB.tar.gz                               | 21.53 GB | b187ae1caf9573557796f10634d9ca0e |
-| Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  | 79.63 MB | f64673686087e9a13b6312963bf966d0 |
-| Table-S5-Annotations_of_MAGIC_proteins.xlsx     |          |                                  |
+| Filename                                           | Filesize  |  MD5                             |
+| -------------------------------------------------- | --------- | -------------------------------- |
+| MAGIC_vMAGs.tar.gz                                 | 5.57 GB   | c4ef508ef5e6f43a8422e9da9e32237d |
+| MAGIC_pMAGs.tar.gz                                 | 18.66 GB  | 894677f2d297e656f7e05ba0cd8f256c |
+| MAGIC_K2DB.tar.gz                                  | 21.53 GB  | b187ae1caf9573557796f10634d9ca0e |
+| Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx     | 79.63 MB  | f64673686087e9a13b6312963bf966d0 |
+| Table-S5a-Proteins_in_the_MAGIC-pMAGs-vMAGs.tsv.gz | 840.86 MB | e9a1568bc53d1b10c72acafd14296de3 |
+| Table-S5b-Annotations_of_MAGIC-Proteins.tsv.gz     | 1.17 GB   | b99bc1520eaf839b0eede4165340251a |
 
 ### MAGs
 
@@ -190,11 +191,11 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | HEVC          | List of vMAGs of the vOTU from HEVC         |
 | LLNEXT        | List of vMAGs of the vOTU from LLNEXT       |
 
-#### Table-S5-Annotations_of_MAGIC_proteins.tsv.gz
+#### Table-S5
 
 This table has two parts. The first part lists proteins in the pMAGs and vMAGs (`Table S5a`), whereas the second part provides functional annotations of the non-redundant proteins (`Table S5b`). Users may retrieve the list of genes on a MAG of interest (from `Table S5a`) and subsequently refer to the gene annotation table for annotations (in `Table S5b`). Conversely, users may retrieve a list of MAGs (from `Table S5a`) carrying the genes of interest (according to `Table S5b`).
 
-##### Table S5a: Proteins in the MAGs (`70,538,090` entries * `5` columns)
+##### Table-S5a-Proteins_in_the_MAGIC-pMAGs-vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
 
 | Field Name        | Description                                                                                         |
 | ------------------|---------------------------------------------------------------------------------------------------- |
@@ -204,7 +205,7 @@ This table has two parts. The first part lists proteins in the pMAGs and vMAGs (
 | original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
 | pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
 
-##### Table S5b: Annotations of the MAGIC proteins (`9,548,653` entries * `49` columns)
+##### Table-S5b-Annotations_of_MAGIC-Proteins.tsv.gz (`9,548,653` entries * `49` columns)
 
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
