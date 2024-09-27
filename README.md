@@ -261,7 +261,7 @@ MAGIC_K2DB/taxonomy/prelim_map.txt
 
 #### A workflow for taxonomic profiling based on the MAGIC database
 
-##### Prepare the Phanta workflow
+1. Prepare the Phanta workflow
 
 ```sh
 $ git clone -b magic_db https://github.com/ohmeta/phanta
@@ -269,14 +269,14 @@ $ git clone -b magic_db https://github.com/ohmeta/phanta
 
 Then please follow the documentation on github to install other dependences software.
 
-##### Create a folder for the project
+2. Create a folder for the project
 
 ```
 mkdir -p profiling_test
 cd profiling_test
 ```
 
-##### Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
+3. Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
 
 | #sample_id  |   fq1                                  | fq2                               |
 | ----------- | -------------------------------------- | --------------------------------- |
@@ -284,9 +284,7 @@ cd profiling_test
 | ERR525732   | /full/path/to/ERR525732.rmhost.1.fq.gz | /full/path/to/ERR525732.rmhost.2.fq.gz |
 | ERR525735   | /full/path/to/ERR525735.rmhost.1.fq.gz | /full/path/to/ERR525735.rmhost.2.fq.gz |
 
-##### Running phanta workflow
-
-###### Update config.yaml like below:
+4. Update config.yaml like below:
 
 ```sh
 $ cp /full/path/to/git/clone/phanta/config.yaml ./
@@ -343,7 +341,7 @@ filter_thresh: 10 # do not assign reads to species X if < this number of reads w
 delete_intermediate: False # True or False
 ```
 
-###### Run phanta workflow based on MAGIC database
+5. Run phanta workflow based on MAGIC database
 
 ```sh
 snakemake \
