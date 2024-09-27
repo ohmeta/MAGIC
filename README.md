@@ -9,11 +9,13 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 
 Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.10369093
 
-| Filename            | Filesize |  MD5                             |
-| ------------------- | -------- | -------------------------------- |
-|  MAGIC_vMAGs.tar.gz | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
-|  MAGIC_pMAGs.tar.gz | 18.66 GB | 894677f2d297e656f7e05ba0cd8f256c |
-|  MAGIC_K2DB.tar.gz  | 21.53 GB | b187ae1caf9573557796f10634d9ca0e |
+| Filename                                        | Filesize |  MD5                             |
+| ----------------------------------------------- | -------- | -------------------------------- |
+| MAGIC_vMAGs.tar.gz                              | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
+| MAGIC_pMAGs.tar.gz                              | 18.66 GB | 894677f2d297e656f7e05ba0cd8f256c |
+| MAGIC_K2DB.tar.gz                               | 21.53 GB | b187ae1caf9573557796f10634d9ca0e |
+| Table-S2-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  |
+| Table-S4-Annotations_of_MAGIC_proteins.tsv.gz   |          | b99bc1520eaf839b0eede4165340251a |
 
 ### MAGs
 
@@ -73,12 +75,12 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 | Field Name           | Description                                                                                                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------|
-| pMAG_id              | ID of the pMAG (primary key)                                                                                                               |
-| pOTU_id              | ID of the pOTU                                                                                                                |
-| pMAG                 | Original name of the pMAG                                                                                                    |
+| pMAG_id              | ID of the pMAG (primary key)                                                                                             |
+| pOTU_id              | ID of the pOTU                                                                                                           |
+| pMAG                 | Original name of the pMAG                                                                                                |
 | pOTU                 | Name of the representative species-level pMAG                                                                            |
-|project_accession | Project from which the MAG was generated|
-|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+| project_accession    | Project from which the MAG was generated                                                                                 |
+| assembly_group       | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | completeness         | Completeness estimated by CheckM                                                                                         |
 | contamination        | Contamination estimated by CheckM                                                                                        |
 | strain heterogeneity | Strain heterogeneity estimated by CheckM                                                                                 |
@@ -86,35 +88,35 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | SGB_quality_level    | Quality level of MAG based on the criteria of species level genomic bins (SGB)                                           |
 | quality_score        | Completeness - 5 * contamination                                                                                         |
 | classification       | Taxonomic assignment by GTDBtk                                                                                           |
-| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                         |
+| taxonomy             | Refined taxonomic assignment, used in the MAGIC database                                                                 |
 | Length               | Length (bp) of the pMAG                                                                                                  |
 | Count                | Number of contigs for the pMAG                                                                                           |
 | GC (%)               | GC content (%) of the pMAG                                                                                               |
 | N50                  | Length of the shortest contig for which longer and equal length contigs cover at least 50 % of the assembly              |
 | pOTU_unique          | Uniqueness of the pOTU compared to the publicly available human gut pOTUs (yes: unique; no: overlapped with known pOTUs) |
-| GUNC-n_genes_called                            | Number of genes called by Prodigal                                                                                                                                                                                              |
-| GUNC-n_genes_mapped                            | Number of genes mapped by diamond into GUNC refDB                                                                                                                                                                               |
-| GUNC-n_contigs                                 | Number of contigs containing mapped genes                                                                                                                                                                                       |
-| GUNC-taxonomic_level                           | Taxonomic clade labels at this taxonomic level were used to calculate values in all following columns. For each genome, all scores at six levels (species level can be added using a command-line option) are calculated        |
-| GUNC-proportion_genes_retained_in_major_clades | Only major clades that have >2% of all mapped genes assigned to them are retained to calculate other scores. Value of this column is n_genes_retained/n_genes_mapped                                                            |
-| GUNC-genes_retained_index                      | n_genes_mapped/n_genes_called * proportion_genes_retained_in_major_clades, i.e. a portion of all called genes retained in major clades                                                                                          |
-| GUNC-clade_separation_score                    | A result of applying a formula explained in GUNC paper to taxonomy and contig labels of genes retained in major clades. Ranges from 0 to 1 and is set to 0 when genes_retained index is <0.4 because that is too few genes left |
-| GUNC-contamination_portion                     | Portion of genes retained in major clades assigned to all clades except the one clade with the highest proportion of genes assigned to it                                                                                       |
-| GUNC-n_effective_surplus_clades                | Inverse Simpson Index of fractions of all clades - 1 (as 1 genome is expected) describing the extent of chimerism, i.e. the effective number of surplus clades represented at a tax level                                       |
-| GUNC-mean_hit_identity                         | Mean identity with which genes in abundant lineages (>2%) hit genes in the reference                                                                                                                                            |
-| GUNC-reference_representation_score            | genes_retained_index * mean_hit_identity. Estimates how well a genome is represented in the GUNC DB                                                                                                                             |
-| GUNC-pass.GUNC                                 | Overall assessment by GUNC. A genome passes if clade_separation_score <= 0.45, a cutoff benchmarked using simulated genomes                                                                                                     |
+| GUNC-n_genes_called  | Number of genes called by Prodigal                                                                                       |
+| GUNC-n_genes_mapped  | Number of genes mapped by diamond into GUNC refDB                                                                        |
+| GUNC-n_contigs       | Number of contigs containing mapped genes                                                                                |
+| GUNC-taxonomic_level | Taxonomic clade labels at this taxonomic level were used to calculate values in all following columns. For each genome, all scores at six levels (species level can be added using a command-line option) are calculated  |
+| GUNC-proportion_genes_retained_in_major_clades | Only major clades that have >2% of all mapped genes assigned to them are retained to calculate other scores. Value of this column is n_genes_retained/n_genes_mapped    |
+| GUNC-genes_retained_index | n_genes_mapped/n_genes_called * proportion_genes_retained_in_major_clades, i.e. a portion of all called genes retained in major clades                                                       |
+| GUNC-clade_separation_score | A result of applying a formula explained in GUNC paper to taxonomy and contig labels of genes retained in major clades. Ranges from 0 to 1 and is set to 0 when genes_retained index is <0.4 because that is too few genes left |
+| GUNC-contamination_portion | Portion of genes retained in major clades assigned to all clades except the one clade with the highest proportion of genes assigned to it                                                   |
+|GUNC-n_effective_surplus_clades|Inverse Simpson Index of fractions of all clades - 1 (as 1 genome is expected) describing the extent of chimerism, i.e. the effective number of surplus clades represented at a tax level |
+| GUNC-mean_hit_identity              | Mean identity with which genes in abundant lineages (>2%) hit genes in the reference                                                                                               |
+| GUNC-reference_representation_score | genes_retained_index * mean_hit_identity. Estimates how well a genome is represented in the GUNC DB                                                                                |
+| GUNC-pass.GUNC                      | Overall assessment by GUNC. A genome passes if clade_separation_score <= 0.45, a cutoff benchmarked using simulated genomes                                                        |
 
 ##### Table S2b: Annotations of MAGIC vMAGs (191,646 entries * 42 columns)
 
 | Field Name              | Description                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
-| vMAG_id                 | ID of the vMAG (primary key)                                                                                                             |
-| vOTU_id                 | ID of the vOTU                                                                                                               |
-| vMAG                    | Original name of the vMAG                                                                                                   |
+| vMAG_id                 | ID of the vMAG (primary key)                                                                                            |
+| vOTU_id                 | ID of the vOTU                                                                                                          |
+| vMAG                    | Original name of the vMAG                                                                                               |
 | vOTU                    | Name of the representative species-level vMAG                                                                           |
-|project_accession | Project from which the MAG was generated|
-|assembly_group| Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
+| project_accession       | Project from which the MAG was generated                                                                                |
+| assembly_group          | Group in which contigs of the MAG were assembled. It is the same as the sample ID, or as the subject ID when multiple samples of the same subject were available |
 | viruses_type            | Type of the virus inferred by geNomad                                                                                   |
 | contig_length           | Length (bp) of the vMAG                                                                                                 |
 | provirus                | Existence of provirus determined by geNomad                                                                             |
@@ -148,7 +150,45 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ##### Table S2c: Clustering structure of MAGIC pOTUs
 
+| name          | information                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| MAGIC_pOTU_id | ID of the MAGIC's pOTU                                           |
+| Rep_DB        | the database where representative pOTU come from                 |
+| Rep_FA        | the fasta file name of representative pOTU                       |
+| MAGIC         | the pMAGs name list of pOTU from MAGIC database                  |
+| CGR2          | the pMAGs name list of pOTU from CRG2 database                   |
+| ELGG          | the pMAGs name list of pOTU from ELGG database                   |
+| GTDB          | the pMAGs name list of pOTU from GTDB database                   |
+| Hadza         | the pMAGs name list of pOTU from Hadza database                  |
+| IMGG          | the pMAGs name list of pOTU from IMGG database                   |
+| JMAG          | the pMAGs name list of pOTU from JMAG database                   |
+| SPMP          | the pMAGs name list of pOTU from SPMP database                   |
+| UHGG          | the pMAGs name list of pOTU from UHGG database                   |
+| WIS           | the pMAGs name list of pOTU from WIS database                    |
+
 ##### Table S2d: Clustering structure of MAGIC vOTUs
+
+| name          | information                                                      |
+| ------------- | ---------------------------------------------------------------- |
+| MAGIC_vOTU_id | ID of the MAGIC's vOTU                                           |
+| MAGIC_vOTU    | Name of the representative species-level vMAG of MAGIC database  |
+| Rep_DB        | the database where representative vOTU come from                 |
+| Rep_FA        | the fasta file name of representative vOTU                       |
+| MAGIC         | the vMAGs name list of vOTU from MAGIC database                  |
+| ELGV          | the vMAGs name list of vOTU from ELGV database                   |
+| GPD           | the vMAGs name list of vOTU from GPD database                    |
+| MGV           | the vMAGs name list of vOTU from MGV database                    |
+| GVD           | the vMAGs name list of vOTU from GVD database                    |
+| IMG_VR        | the vMAGs name list of vOTU from IMG_VR database                 |
+| RefSeq        | the vMAGs name list of vOTU from RefSeq database                 |
+| COPSAC_V      | the vMAGs name list of vOTU from COPSAC_V database               |
+| JVD           | the vMAGs name list of vOTU from JVD database                    |
+| JP4D          | the vMAGs name list of vOTU from JP4D database                   |
+| Centenarians  | the vMAGs name list of vOTU from Centenarians database           |
+| Hadza         | the vMAGs name list of vOTU from Hadza database                  |
+| LOU           | the vMAGs name list of vOTU from LOU database                    |
+| HEVC          | the vMAGs name list of vOTU from HEVC database                   |
+| LLNEXT        | the vMAGs name list of vOTU from LLNEXT database                 |
 
 #### Table-S4-Annotations_of_MAGIC_proteins.tsv.gz
 
@@ -156,19 +196,19 @@ This table has two parts. The first part lists proteins in the pMAGs and vMAGs (
 
 ##### Table S4a: Proteins in the MAGs (70,538,090 entries * 5 columns)
 
-| Field Name               | Description                                                                                                                                 |
-|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| MAG_id                       | ID of the pMAG/vMAG                                                                                                                           |
-| OTU_id                       | ID of the pOTU/vOTU                                                                                                                           |
-| source_mag                       | Original name of the pMAG/vMAG                                                                                                                           |
-| original_protein                       | ID of the protein annotated in the MAG (primary key)                                                                                                                         |
-| pv_rep                       | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b.                                                                                                                           |
+| Field Name        | Description                                                                                         |
+| ------------------|---------------------------------------------------------------------------------------------------- |
+| MAG_id            | ID of the pMAG/vMAG                                                                                 |
+| OTU_id            | ID of the pOTU/vOTU                                                                                 |
+| source_mag        | Original name of the pMAG/vMAG                                                                      |
+| original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
+| pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
 
 ##### Table S4b: Annotations of the MAGIC proteins (9,548,653 entries * 49 columns)
 
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| ID                       | ID of the protein (primary key)                                                                                                                          |
+| ID                       | ID of the protein (primary key)                                                                                                             |
 | eggNOG_eggNOG_OGs        | eggNOG orthologous group                                                                                                                    |
 | eggNOG_COG_category      | Clusters of Orthologous Genes (COG) category                                                                                                |
 | eggNOG_Description       | Description of the COG category                                                                                                             |
@@ -278,8 +318,8 @@ cd profiling_test
 
 3. Prepare a sample sheet file `samples.rmhost.tsv`. E.g.,
 
-| #sample_id  |   fq1                                  | fq2                               |
-| ----------- | -------------------------------------- | --------------------------------- |
+| #sample_id  |   fq1                                  | fq2                                    |
+| ----------- | -------------------------------------- | -------------------------------------- |
 | ERR525724   | /full/path/to/ERR525724.rmhost.1.fq.gz | /full/path/to/ERR525724.rmhost.2.fq.gz |
 | ERR525732   | /full/path/to/ERR525732.rmhost.1.fq.gz | /full/path/to/ERR525732.rmhost.2.fq.gz |
 | ERR525735   | /full/path/to/ERR525735.rmhost.1.fq.gz | /full/path/to/ERR525735.rmhost.2.fq.gz |
