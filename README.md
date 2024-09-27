@@ -15,7 +15,7 @@ Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.1036909
 | MAGIC_vMAGs.tar.gz                              | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
 | MAGIC_pMAGs.tar.gz                              | 18.66 GB | 894677f2d297e656f7e05ba0cd8f256c |
 | MAGIC_K2DB.tar.gz                               | 21.53 GB | b187ae1caf9573557796f10634d9ca0e |
-| Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  |          |                                  |
+| Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  | 79.63 MB | f64673686087e9a13b6312963bf966d0 |
 | Table-S5-Annotations_of_MAGIC_proteins.xlsx     |          |                                  |
 
 ### MAGs
@@ -110,21 +110,21 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ##### Table S4b: Clustering of MAGIC pOTUs with public databases
 
-| Field Name    | Description                                          |
-| ------------- | ---------------------------------------------------- |
-| MAGIC_pOTU_id | ID of the pOTU in MAGIC                              |
-| Rep_DB        | Source of the representative pOTU                    |
-| Rep_FA        | File name of the representative pOTU                 |
-| MAGIC         | List of pMAGs of the pOTU from MAGIC database        |
-| CGR2          | List of pMAGs of the pOTU from CRG2 database         |
-| ELGG          | List of pMAGs of the pOTU from ELGG database         |
-| GTDB          | List of pMAGs of the pOTU from GTDB database         |
-| Hadza         | List of pMAGs of the pOTU from Hadza database        |
-| IMGG          | List of pMAGs of the pOTU from IMGG database         |
-| JMAG          | List of pMAGs of the pOTU from JMAG database         |
-| SPMP          | List of pMAGs of the pOTU from SPMP database         |
-| UHGG          | List of pMAGs of the pOTU from UHGG database         |
-| WIS           | List of pMAGs of the pOTU from WIS database          |
+| Field Name    | Description                          |
+| ------------- | ------------------------------------ |
+| MAGIC_pOTU_id | ID of the pOTU in MAGIC              |
+| Rep_DB        | Source of the representative pOTU    |
+| Rep_FA        | File name of the representative pOTU |
+| MAGIC         | List of pMAGs of the pOTU from MAGIC |
+| CGR2          | List of pMAGs of the pOTU from CRG2  |
+| ELGG          | List of pMAGs of the pOTU from ELGG  |
+| GTDB          | List of pMAGs of the pOTU from GTDB  |
+| Hadza         | List of pMAGs of the pOTU from Hadza |
+| IMGG          | List of pMAGs of the pOTU from IMGG  |
+| JMAG          | List of pMAGs of the pOTU from JMAG  |
+| SPMP          | List of pMAGs of the pOTU from SPMP  |
+| UHGG          | List of pMAGs of the pOTU from UHGG  |
+| WIS           | List of pMAGs of the pOTU from WIS   |
 
 ##### Table S4c: Annotations of MAGIC vMAGs (`191,646` entries * `42` columns)
 
@@ -169,26 +169,26 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ##### Table S4d: Clustering of MAGIC vOTUs with public databases
 
-| Field Name    | Description                                          |
-| ------------- | ---------------------------------------------------- |
-| MAGIC_vOTU_id | ID of the pOTU in MAGIC                              |
-| Rep_DB        | Source of the representative vOTU                    |
-| Rep_FA        | File name of the representative vOTU                 |
-| MAGIC         | List of vMAGs of the vOTU from MAGIC database        |
-| ELGV          | List of vMAGs of the vOTU from ELGV database         |
-| GPD           | List of vMAGs of the vOTU from GPD database          |
-| MGV           | List of vMAGs of the vOTU from MGV database          |
-| GVD           | List of vMAGs of the vOTU from GVD database          |
-| IMG_VR        | List of vMAGs of the vOTU from IMG_VR database       |
-| RefSeq        | List of vMAGs of the vOTU from RefSeq database       |
-| COPSAC_V      | List of vMAGs of the vOTU from COPSAC_V database     |
-| JVD           | List of vMAGs of the vOTU from JVD database          |
-| JP4D          | List of vMAGs of the vOTU from JP4D database         |
-| Centenarians  | List of vMAGs of the vOTU from Centenarians database |
-| Hadza         | List of vMAGs of the vOTU from Hadza database        |
-| LOU           | List of vMAGs of the vOTU from LOU database          |
-| HEVC          | List of vMAGs of the vOTU from HEVC database         |
-| LLNEXT        | List of vMAGs of the vOTU from LLNEXT database       |
+| Field Name    | Description                                 |
+| ------------- | ------------------------------------------- |
+| MAGIC_vOTU_id | ID of the pOTU in MAGIC                     |
+| Rep_DB        | Source of the representative vOTU           |
+| Rep_FA        | File name of the representative vOTU        |
+| MAGIC         | List of vMAGs of the vOTU from MAGIC        |
+| ELGV          | List of vMAGs of the vOTU from ELGV         |
+| GPD           | List of vMAGs of the vOTU from GPD          |
+| MGV           | List of vMAGs of the vOTU from MGV          |
+| GVD           | List of vMAGs of the vOTU from GVD          |
+| IMG_VR        | List of vMAGs of the vOTU from IMG_VR       |
+| RefSeq        | List of vMAGs of the vOTU from RefSeq       |
+| COPSAC_V      | List of vMAGs of the vOTU from COPSAC_V     |
+| JVD           | List of vMAGs of the vOTU from JVD          |
+| JP4D          | List of vMAGs of the vOTU from JP4D         |
+| Centenarians  | List of vMAGs of the vOTU from Centenarians |
+| Hadza         | List of vMAGs of the vOTU from Hadza        |
+| LOU           | List of vMAGs of the vOTU from LOU          |
+| HEVC          | List of vMAGs of the vOTU from HEVC         |
+| LLNEXT        | List of vMAGs of the vOTU from LLNEXT       |
 
 #### Table-S5-Annotations_of_MAGIC_proteins.tsv.gz
 
