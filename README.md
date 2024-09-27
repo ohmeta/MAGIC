@@ -14,8 +14,8 @@ Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.1036909
 | MAGIC_vMAGs.tar.gz                              | 5.57 GB  | c4ef508ef5e6f43a8422e9da9e32237d |
 | MAGIC_pMAGs.tar.gz                              | 18.66 GB | 894677f2d297e656f7e05ba0cd8f256c |
 | MAGIC_K2DB.tar.gz                               | 21.53 GB | b187ae1caf9573557796f10634d9ca0e |
-| Table-S2-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  |
-| Table-S4-Annotations_of_MAGIC_proteins.tsv.gz   |          | b99bc1520eaf839b0eede4165340251a |
+| Table-S2-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx  |          |                                  |
+| Table-S4-Annotations_of_MAGIC_proteins.xlsx     |          |                                  |
 
 ### MAGs
 
@@ -150,7 +150,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ##### Table S2c: Clustering structure of MAGIC pOTUs
 
-| name          | information                                                      |
+| Field Name    | Description                                                      |
 | ------------- | ---------------------------------------------------------------- |
 | MAGIC_pOTU_id | ID of the MAGIC's pOTU                                           |
 | Rep_DB        | the database where representative pOTU come from                 |
@@ -168,7 +168,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ##### Table S2d: Clustering structure of MAGIC vOTUs
 
-| name          | information                                                      |
+| Field Name    | Description                                                      |
 | ------------- | ---------------------------------------------------------------- |
 | MAGIC_vOTU_id | ID of the MAGIC's vOTU                                           |
 | MAGIC_vOTU    | Name of the representative species-level vMAG of MAGIC database  |
