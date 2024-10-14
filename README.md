@@ -9,6 +9,8 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 ## Files
 
 Please download `MAGIC` from here: https://zenodo.org/doi/10.5281/zenodo.10369093
+        
+        
 
 | Filename                                           | Filesize  |  MD5                             |
 | -------------------------------------------------- | --------- | -------------------------------- |
@@ -120,7 +122,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | CGR2          | List of pMAGs of the pOTU from CRG2  |
 | ELGG          | List of pMAGs of the pOTU from ELGG  |
 | GTDB          | List of pMAGs of the pOTU from GTDB  |
-| Hadza         | List of pMAGs of the pOTU from Hadza |
+| Hadza         | List of pMAGs of the pOTU from the Hadza hunter-gatherer dataset |
 | IMGG          | List of pMAGs of the pOTU from IMGG  |
 | JMAG          | List of pMAGs of the pOTU from JMAG  |
 | SPMP          | List of pMAGs of the pOTU from SPMP  |
