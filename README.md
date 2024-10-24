@@ -202,7 +202,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ### MAGs's proteins and annotations
 
-This table has three parts. The first part lists proteins in the pMAGs and vMAGs (`Proteins_in_pMAGs_vMAGs.tsv.gz`), whereas the second part provides functional annotations of the non-redundant proteins (`Data_S4-12_Annotations_of_MAGIC-Proteins.tsv.gz `). The third part provides the FASTA format sequence of each protine. Users may retrieve the list of genes on a MAG of interest and subsequently refer to the gene annotation table for annotations. Conversely, users may retrieve a list of MAGs carrying the genes of interest.
+This table has three parts. The first part lists proteins in the pMAGs and vMAGs (`Proteins_in_pMAGs_vMAGs.tsv.gz`), whereas the second part provides functional annotations of the non-redundant proteins (`Data_S4-12_Annotations_of_MAGIC-Proteins.tsv.gz `). The third part provides the FASTA format sequence of each protein. Users may retrieve the list of genes on a MAG of interest and subsequently refer to the gene annotation table for annotations. Conversely, users may retrieve a list of MAGs carrying the genes of interest.
 
 #### Proteins_in_pMAGs_vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
 
