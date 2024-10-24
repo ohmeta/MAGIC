@@ -79,7 +79,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 ........
 ```
 
-### MAGs's annotations anc clustering information
+### MAGs's annotations and clustering information
 
 #### DataS1-Annotations_of_MAGIC_pMAGs.xlsx (`26,352 entries` * `31` columns)
 
