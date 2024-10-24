@@ -10,18 +10,18 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 
 Please download `MAGIC` dataset from here: https://zenodo.org/doi/10.5281/zenodo.10369093
 
-| Filename                                           | Filesize    |  SHA256SUM                                                       |
-| -------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
-| MAGIC_pMAGs.tar.gz                                 | ~ 5.57 GB   | 9a293ed062e038ba5f47d53dacdad067f09b557ff720745caf2c22766872464a |
-| MAGIC_vMAGs.tar.gz                                 | ~ 18.66 GB  | d0a63a1c19defa268ee35b65e798125bbeb60af5c01a580c3262925d43ec0bff |
-| MAGIC_K2DB.tar.gz                                  | ~ 21.53 GB  | db76b92a97bb55391a78199bf6de04ff9795a7722864d099fa05f9772f19e2a9 |
-| DataS1-Annotations_of_MAGIC_pMAGs.xlsx             | ~ 6.13 MB   | 0de2ceefda96d546e958f4c5425ca92f832097b679ea3204e4634fede7078399 |
-| DataS2-Clustering_of_pOTUs.xlsx                    | ~ 531.79 KB | 00d2ec972f52c8852878126a738ad7f6fba3b03b8759b520ef5e134106cd2897 |
-| DataS3-Annotations_of_MAGIC_vMAGs.xlsx             | ~ 63.03 MB  | 8d7e686588175d951b4afa15a347ee99e40f0efb868d842e4862bde2a63a734b |
-| DataS4-Clustering_of_vOTUs.xlsx                    | ~ 17.48 MB  | 59254a35de0179fd4f29197222c29f6d267442b3f51545524bf4a49840f4c4f3 |
-| Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz    | ~ 1.17 GB   | e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb |
-| Proteins_in_pMAGs_vMAGs.tsv.gz                     | ~ 840.86 MB | 91625f705b134bf2f76e7ac11cdeb91d47236a8b32129c1d7c70d9a7b5273ceb |
-| MAGIC_proteins_95.fasta.gz                         | ~ 2.01 GB   | b3803ff4ce59346bb0e52f0c1876b4e8fdee3005c2e15290ff0957819d87100a |
+| Filename                                           | Filesize    |  SHA256SUM                                                         |
+| -------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
+| MAGIC_pMAGs.tar.gz                                 | `5.57 GB`   | `9a293ed062e038ba5f47d53dacdad067f09b557ff720745caf2c22766872464a` |
+| MAGIC_vMAGs.tar.gz                                 | `18.66 GB`  | `d0a63a1c19defa268ee35b65e798125bbeb60af5c01a580c3262925d43ec0bff` |
+| MAGIC_K2DB.tar.gz                                  | `21.53 GB`  | `db76b92a97bb55391a78199bf6de04ff9795a7722864d099fa05f9772f19e2a9` |
+| DataS1-Annotations_of_MAGIC_pMAGs.xlsx             | `6.13 MB`   | `0de2ceefda96d546e958f4c5425ca92f832097b679ea3204e4634fede7078399` |
+| DataS2-Clustering_of_pOTUs.xlsx                    | `531.79 KB` | `00d2ec972f52c8852878126a738ad7f6fba3b03b8759b520ef5e134106cd2897` |
+| DataS3-Annotations_of_MAGIC_vMAGs.xlsx             | `63.03 MB`  | `8d7e686588175d951b4afa15a347ee99e40f0efb868d842e4862bde2a63a734b` |
+| DataS4-Clustering_of_vOTUs.xlsx                    | `17.48 MB`  | `59254a35de0179fd4f29197222c29f6d267442b3f51545524bf4a49840f4c4f3` |
+| Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz    | `1.17 GB`   | `e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb` |
+| Proteins_in_pMAGs_vMAGs.tsv.gz                     | `840.86 MB` | `91625f705b134bf2f76e7ac11cdeb91d47236a8b32129c1d7c70d9a7b5273ceb` |
+| MAGIC_proteins_95.fasta.gz                         | `2.01 GB`   | `b3803ff4ce59346bb0e52f0c1876b4e8fdee3005c2e15290ff0957819d87100a` |
 
 After downloading, please verify the completeness of the data:
 
@@ -270,7 +270,7 @@ This table has three parts. The first part lists proteins in the pMAGs and vMAGs
 
 #### MAGIC_proteins_95.fasta.gz
 
-A non-redundant protein dataset, 7,573,080 proteins (95% amino acid identity, AAI) predicted from the pMAGs by Bakta (v1.8.1) and 4,588,724 proteins (95% AAI) predicted from the vMAGs by prodigal-gv were clustered into 9,548,653 proteins at 95% AAI.
+A non-redundant protein dataset, `7,573,080` proteins (`95%` amino acid identity, AAI) predicted from the pMAGs by Bakta (v1.8.1) and `4,588,724` proteins (`95%` AAI) predicted from the vMAGs by prodigal-gv were clustered into `9,548,653` proteins at `95%` AAI.
 
 
 ### Workflow
