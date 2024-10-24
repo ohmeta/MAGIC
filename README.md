@@ -10,14 +10,18 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 
 Please download `MAGIC` dataset from here: https://zenodo.org/doi/10.5281/zenodo.10369093
 
-| Filename                                           | Filesize  |  SHA256SUM                                                       |
-| -------------------------------------------------- | --------- | ---------------------------------------------------------------- |
-| MAGIC_pMAGs.tar.gz                                 | 5.57 GB   | 9a293ed062e038ba5f47d53dacdad067f09b557ff720745caf2c22766872464a |
-| MAGIC_vMAGs.tar.gz                                 | 18.66 GB  | d0a63a1c19defa268ee35b65e798125bbeb60af5c01a580c3262925d43ec0bff |
-| MAGIC_K2DB.tar.gz                                  | 21.53 GB  | db76b92a97bb55391a78199bf6de04ff9795a7722864d099fa05f9772f19e2a9 |
-| Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx     | 79.63 MB  | 19673885a8fac124a7cdbd8805ef96669eefc138826045c96a1493bb2b11b128 |
-| Table-S5A-Proteins_in_the_MAGIC-pMAGs-vMAGs.tsv.gz | 840.86 MB | 91625f705b134bf2f76e7ac11cdeb91d47236a8b32129c1d7c70d9a7b5273ceb |
-| Table-S5B-Annotations_of_MAGIC-Proteins.tsv.gz     | 1.17 GB   | e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb |
+| Filename                                           | Filesize    |  SHA256SUM                                                       |
+| -------------------------------------------------- | ----------- | ---------------------------------------------------------------- |
+| MAGIC_pMAGs.tar.gz                                 | ~ 5.57 GB   | 9a293ed062e038ba5f47d53dacdad067f09b557ff720745caf2c22766872464a |
+| MAGIC_vMAGs.tar.gz                                 | ~ 18.66 GB  | d0a63a1c19defa268ee35b65e798125bbeb60af5c01a580c3262925d43ec0bff |
+| MAGIC_K2DB.tar.gz                                  | ~ 21.53 GB  | db76b92a97bb55391a78199bf6de04ff9795a7722864d099fa05f9772f19e2a9 |
+| DataS1-Annotations_of_MAGIC_pMAGs.xlsx             | ~ 6.13 MB   | 0de2ceefda96d546e958f4c5425ca92f832097b679ea3204e4634fede7078399 |
+| DataS2-Clustering_of_pOTUs.xlsx                    | ~ 531.79 KB | 00d2ec972f52c8852878126a738ad7f6fba3b03b8759b520ef5e134106cd2897 |
+| DataS3-Annotations_of_MAGIC_vMAGs.xlsx             | ~ 63.03 MB  | 8d7e686588175d951b4afa15a347ee99e40f0efb868d842e4862bde2a63a734b |
+| DataS4-Clustering_of_vOTUs.xlsx                    | ~ 17.48 MB  | 59254a35de0179fd4f29197222c29f6d267442b3f51545524bf4a49840f4c4f3 |
+| Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz    | ~ 1.17 GB   | e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb |
+| Proteins_in_pMAGs_vMAGs.tsv.gz                     | ~ 840.86 MB | 91625f705b134bf2f76e7ac11cdeb91d47236a8b32129c1d7c70d9a7b5273ceb |
+| MAGIC_proteins_95.fasta.gz                         | ~ 2.01 GB   | b3803ff4ce59346bb0e52f0c1876b4e8fdee3005c2e15290ff0957819d87100a |
 
 After downloading, please verify the completeness of the data:
 
@@ -77,9 +81,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 
 ### Tables
 
-#### Table-S4-Annotations_of_MAGIC-pMAGs-vMAGs.xlsx
-
-##### Table S4A: Annotations of MAGIC pMAGs (`26,352 entries` * `34` columns)
+#### DataS1-Annotations_of_MAGIC_pMAGs.xlsx (`26,352 entries` * `31` columns)
 
 | Field Name           | Description                                                                                                              |
 |----------------------|--------------------------------------------------------------------------------------------------------------------------|
@@ -110,12 +112,12 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | GUNC-genes_retained_index | n_genes_mapped/n_genes_called * proportion_genes_retained_in_major_clades, i.e. a portion of all called genes retained in major clades                                                       |
 | GUNC-clade_separation_score | A result of applying a formula explained in GUNC paper to taxonomy and contig labels of genes retained in major clades. Ranges from 0 to 1 and is set to 0 when genes_retained index is <0.4 because that is too few genes left |
 | GUNC-contamination_portion | Portion of genes retained in major clades assigned to all clades except the one clade with the highest proportion of genes assigned to it                                                   |
-|GUNC-n_effective_surplus_clades|Inverse Simpson Index of fractions of all clades - 1 (as 1 genome is expected) describing the extent of chimerism, i.e. the effective number of surplus clades represented at a tax level |
+| GUNC-n_effective_surplus_clades | Inverse Simpson Index of fractions of all clades - 1 (as 1 genome is expected) describing the extent of chimerism, i.e. the effective number of surplus clades represented at a tax level |
 | GUNC-mean_hit_identity              | Mean identity with which genes in abundant lineages (>2%) hit genes in the reference                                                                                               |
 | GUNC-reference_representation_score | genes_retained_index * mean_hit_identity. Estimates how well a genome is represented in the GUNC DB                                                                                |
 | GUNC-pass.GUNC                      | Overall assessment by GUNC. A genome passes if clade_separation_score <= 0.45, a cutoff benchmarked using simulated genomes                                                        |
 
-##### Table S4B: Clustering of MAGIC pOTUs with public databases
+#### DataS2-Clustering_of_pOTUs.xlsx
 
 | Field Name    | Description                                                      |
 | ------------- | ---------------------------------------------------------------- |
@@ -133,7 +135,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | UHGG          | List of pMAGs of the pOTU from UHGG                              |
 | WIS           | List of pMAGs of the pOTU from WIS                               |
 
-##### Table S4C: Annotations of MAGIC vMAGs (`191,646` entries * `42` columns)
+#### DataS3-Annotations_of_MAGIC_vMAGs.xlsx (`191,646` entries * `36` columns)
 
 | Field Name              | Description                                                                                                             |
 |-------------------------|-------------------------------------------------------------------------------------------------------------------------|
@@ -174,7 +176,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | size_MAGIC              | Number of MAGIC-derived vMAGs in the vOTU                                                                               |
 | vOTU_unique             | Uniquness of the vOTU compared to the publicly available human gut vOTUs (yes: unique; no: overlapped with known vOTUs) |
 
-##### Table S4D: Clustering of MAGIC vOTUs with public databases
+#### DataS4-Clustering_of_vOTUs.xlsx
 
 | Field Name    | Description                                                  |
 | ------------- | ------------------------------------------------------------ |
@@ -197,21 +199,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | HEVC          | List of vMAGs of the vOTU from HEVC                          |
 | LLNEXT        | List of vMAGs of the vOTU from LLNEXT                        |
 
-#### Table-S5
-
-This table has two parts. The first part lists proteins in the pMAGs and vMAGs (`Table S5a`), whereas the second part provides functional annotations of the non-redundant proteins (`Table S5b`). Users may retrieve the list of genes on a MAG of interest (from `Table S5a`) and subsequently refer to the gene annotation table for annotations (in `Table S5b`). Conversely, users may retrieve a list of MAGs (from `Table S5a`) carrying the genes of interest (according to `Table S5b`).
-
-##### Table-S5A-Proteins_in_the_MAGIC-pMAGs-vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
-
-| Field Name        | Description                                                                                         |
-| ------------------|---------------------------------------------------------------------------------------------------- |
-| MAG_id            | ID of the pMAG/vMAG                                                                                 |
-| OTU_id            | ID of the pOTU/vOTU                                                                                 |
-| source_mag        | Original name of the pMAG/vMAG                                                                      |
-| original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
-| pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
-
-##### Table-S5B-Annotations_of_MAGIC-Proteins.tsv.gz (`9,548,653` entries * `49` columns)
+#### Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz (`9,548,653` entries * `49` columns)
 
 | Field Name               | Description                                                                                                                                 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
@@ -264,6 +252,20 @@ This table has two parts. The first part lists proteins in the pMAGs and vMAGs (
 | uniq_shared              | Uniquness of the protein compared to the publicly available proteins (uniq: unique; shared: overlapped with known proteins)                 |
 | source_stat              | Summary of the source of the protein, expressed as "P_count V_count". E.g., a protein found in one pMAG and two vMAGs is marked as "P1V2"   |
 | source                   | Category of the source of the protein, either from pmag(s), vmag(s), or "both" (pmag and vmag)                                              |
+
+#### Proteins_in_pMAGs_vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
+
+| Field Name        | Description                                                                                         |
+| ------------------|---------------------------------------------------------------------------------------------------- |
+| MAG_id            | ID of the pMAG/vMAG                                                                                 |
+| OTU_id            | ID of the pOTU/vOTU                                                                                 |
+| source_mag        | Original name of the pMAG/vMAG                                                                      |
+| original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
+| pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
+
+#### MAGIC_proteins_95.fasta.gz
+
+A non-redundant protein dataset, 7,573,080 proteins (95% amino acid identity, AAI) predicted from the pMAGs by Bakta (v1.8.1) and 4,588,724 proteins (95% AAI) predicted from the vMAGs by prodigal-gv were clustered into 9,548,653 proteins at 95% AAI.
 
 
 ### Workflow
