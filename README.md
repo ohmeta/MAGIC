@@ -29,7 +29,7 @@ After downloading, please verify the completeness of the data:
 sha256sum -c SHA256SUM.txt
 ```
 
-### MAGs
+### MAGs genomic FASTA file
 
 #### MAGs Folder structure
 
@@ -79,7 +79,7 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 ........
 ```
 
-### Tables
+### MAGs's annotations anc clustering information
 
 #### DataS1-Annotations_of_MAGIC_pMAGs.xlsx (`26,352 entries` * `31` columns)
 
@@ -199,6 +199,21 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | HEVC          | List of vMAGs of the vOTU from HEVC                          |
 | LLNEXT        | List of vMAGs of the vOTU from LLNEXT                        |
 
+
+### MAGs's proteins and annotations
+
+This table has three parts. The first part lists proteins in the pMAGs and vMAGs (`Proteins_in_pMAGs_vMAGs.tsv.gz`), whereas the second part provides functional annotations of the non-redundant proteins (`Data_S4-12_Annotations_of_MAGIC-Proteins.tsv.gz `). The third part provides the FASTA format sequence of each protine. Users may retrieve the list of genes on a MAG of interest and subsequently refer to the gene annotation table for annotations. Conversely, users may retrieve a list of MAGs carrying the genes of interest.
+
+#### Proteins_in_pMAGs_vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
+
+| Field Name        | Description                                                                                         |
+| ------------------|---------------------------------------------------------------------------------------------------- |
+| MAG_id            | ID of the pMAG/vMAG                                                                                 |
+| OTU_id            | ID of the pOTU/vOTU                                                                                 |
+| source_mag        | Original name of the pMAG/vMAG                                                                      |
+| original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
+| pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
+
 #### Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz (`9,548,653` entries * `49` columns)
 
 | Field Name               | Description                                                                                                                                 |
@@ -252,16 +267,6 @@ MAGIC_vMAGs/000/000/003/MAGIC_vMAG_000000003.fa.seqkit.stats.tsv
 | uniq_shared              | Uniquness of the protein compared to the publicly available proteins (uniq: unique; shared: overlapped with known proteins)                 |
 | source_stat              | Summary of the source of the protein, expressed as "P_count V_count". E.g., a protein found in one pMAG and two vMAGs is marked as "P1V2"   |
 | source                   | Category of the source of the protein, either from pmag(s), vmag(s), or "both" (pmag and vmag)                                              |
-
-#### Proteins_in_pMAGs_vMAGs.tsv.gz (`70,538,090` entries * `5` columns)
-
-| Field Name        | Description                                                                                         |
-| ------------------|---------------------------------------------------------------------------------------------------- |
-| MAG_id            | ID of the pMAG/vMAG                                                                                 |
-| OTU_id            | ID of the pOTU/vOTU                                                                                 |
-| source_mag        | Original name of the pMAG/vMAG                                                                      |
-| original_protein  | ID of the protein annotated in the MAG (primary key)                                                |
-| pv_rep            | ID of the representative protein. This is the foreign key refering to the primary key of Table S4b  |
 
 #### MAGIC_proteins_95.fasta.gz
 
