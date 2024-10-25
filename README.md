@@ -19,7 +19,7 @@ Please download `MAGIC` dataset from here: https://zenodo.org/doi/10.5281/zenodo
 | DataS2-Clustering_of_pOTUs.xlsx                    | `531.79 KB` | `00d2ec972f52c8852878126a738ad7f6fba3b03b8759b520ef5e134106cd2897` |
 | DataS3-Annotations_of_MAGIC_vMAGs.xlsx             | `63.03 MB`  | `8d7e686588175d951b4afa15a347ee99e40f0efb868d842e4862bde2a63a734b` |
 | DataS4-Clustering_of_vOTUs.xlsx                    | `17.48 MB`  | `59254a35de0179fd4f29197222c29f6d267442b3f51545524bf4a49840f4c4f3` |
-| Data_S5-12_Annotations_of_MAGIC-Proteins.tsv.gz    | `1.17 GB`   | `e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb` |
+| DataS5-12-Annotations_of_MAGIC-Proteins.tsv.gz    | `1.17 GB`   | `e2221581bac3f09c7dba6af2273241792e0e87f7182dd0a3240c7e5609a102eb` |
 | Proteins_in_pMAGs_vMAGs.tsv.gz                     | `840.86 MB` | `91625f705b134bf2f76e7ac11cdeb91d47236a8b32129c1d7c70d9a7b5273ceb` |
 | MAGIC_proteins_95.fasta.gz                         | `2.01 GB`   | `b3803ff4ce59346bb0e52f0c1876b4e8fdee3005c2e15290ff0957819d87100a` |
 
