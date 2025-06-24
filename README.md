@@ -9,6 +9,8 @@ Existing microbiota databases are biased towards adult samples, hampering accura
 ## Files
 
 Please download `MAGIC` dataset from here: https://zenodo.org/doi/10.5281/zenodo.10369093
+        
+        
 
 | Filename                                           | Filesize    |  SHA256SUM                                                         |
 | -------------------------------------------------- | ----------- | ------------------------------------------------------------------ |
@@ -319,6 +321,10 @@ MAGIC_K2DB/taxonomy/prelim_map.txt
 
 ```sh
 $ git clone -b magic_db https://github.com/ohmeta/phanta
+# in an activated environment
+conda env update --file /full/path/to/git/clone/phanta/phanta_env.yaml
+# Or create a new environment
+conda env create --name phanta --file /full/path/to/git/clone/phanta/phanta_env.yaml
 ```
 
 Then please follow the documentation on github to install other dependences software.
